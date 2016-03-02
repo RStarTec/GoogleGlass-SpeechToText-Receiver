@@ -1,0 +1,63 @@
+<!--
+  ~ Copyright (c) 2015,2016 Annie Hui @ RStar Technology Solutions
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rstar.glass.speechtotextreceiver"
+    >
+
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:icon="@drawable/ic_carrot_logo"
+        android:label="@string/app_name" >
+
+        <activity android:name=".MainActivity"
+            android:icon="@drawable/ic_carrot_logo"
+            android:label="@string/app_name"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+            <meta-data android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger_start"
+                />
+        </activity>
+
+
+
+        <activity
+            android:name=".lowfreq.TranscribeMenuActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".font.FontsizeActivity"
+            android:exported="true" >
+        </activity>
+
+        <service
+            android:name=".lowfreq.TextService"
+            android:exported="true">
+        </service>
+
+    </application>
+
+
+</manifest>
