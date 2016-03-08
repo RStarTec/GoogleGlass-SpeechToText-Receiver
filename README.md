@@ -1,4 +1,4 @@
-[[https://github.com/RStarTec/SpeechToTextReceiver-GoogleGlass/blob/master/SpeechToTextBroadcaster.png|alt=SpeechToTextBroadcaster]]
+![System Diagram](SpeechToTextBroadcaster.png)
 
 ### Purpose
 
