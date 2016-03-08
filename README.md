@@ -1,3 +1,4 @@
+[[https://github.com/RStarTec/SpeechToTextReceiver-GoogleGlass/blob/master/SpeechToTextBroadcaster.png|alt=SpeechToTextBroadcaster]]
 
 ### Purpose
 
